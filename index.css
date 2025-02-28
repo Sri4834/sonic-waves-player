@@ -1,4 +1,13 @@
-:root {
+@font-face {
+      font-family: 'Emirates-Bold';
+      src: url('../fonts/Emirates-Bold.woff2') format('woff2'),
+           url('../fonts/Emirates-Bold.woff') format('woff'),
+           url('../fonts/Emirates-Bold.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    :root {
     --primary-color: #1db954;
     --secondary-color: #191414;
     --text-color: #ffffff;
@@ -263,26 +272,6 @@
     border-radius: 5px;
   }
   /* Responsive styles */
-/*   @media (max-width: 850px) {
-    main {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 0;
-      left: -20px;
-    }
-  
-    .playlist-box,
-    .container {
-      width: 90%;
-      max-width: 450px;
-    }
-  
-    .playlist-box {
-      margin-bottom: 30px;
-    }
-  }
-   */
   @media (max-width: 850px) {
     header h2 {
      font-size: 36px;
@@ -326,5 +315,91 @@
         overflow-y: auto;
     }
   }
-  
-  
+  @media (max-width: 1200px) {
+    main {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      zoom: 90%;
+    }
+
+    .container,
+    .playlist-box {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 850px) {
+    header h2 {
+      font-size: 36px;
+    }
+
+    .music-player,
+    .playlist-box {
+      padding: 15px;
+    }
+
+    .album-cover img {
+      width: 60%;
+    }
+
+    .visualizer-container {
+      height: 60px;
+    }
+
+    .control-btn {
+      font-size: 0.9rem;
+      margin: 0 8px;
+    }
+
+    .play-btn {
+      font-size: 1.3rem;
+      width: 45px;
+      height: 45px;
+    }
+
+    main {
+      zoom: 82%;
+      height: auto;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    header h2 {
+      font-size: 30px;
+    }
+
+    .album-cover img {
+      width: 80%;
+    }
+
+    .controls {
+      zoom: 150%;
+      width: 100%;
+    }
+    .control-btn {
+      font-size: 0.8rem;
+      margin: 0 5px;
+    }
+
+    .play-btn {
+      font-size: 1rem;
+      width: 40px;
+      height: 40px;
+    }
+    .progress-container {
+      font-size: 2rem;
+    }
+    .volume-container i {
+      font-size: 3rem;
+    }
+    #volume{
+        height: 10px;
+    }
+
+    main {
+      /* zoom: 70%; */
+      padding: 5px;
+    }
+  }
