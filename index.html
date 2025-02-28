@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SONIC WAVESz 🎶</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @font-face {
+      font-family: 'Emirates-Bold';
+      src: url('../fonts/Emirates-Bold.woff2') format('woff2'),
+           url('../fonts/Emirates-Bold.woff') format('woff'),
+           url('../fonts/Emirates-Bold.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>&nbsp; Sonic Waves'z 🎶</h2>
+  </header>
+  <div id="background-blur"></div>
+  <main>
+    <div class="playlist-box">
+      <div class="playlist">
+        <h1>Playlist</h1>
+        <ul id="playlist-items">
+          <li>Song 1: Devara Thandavam</li>
+          <li>Song 2: Devara All Hair Tiger</li>
+          <li>Song 3: Solo Levelling Intro</li>
+          <li>Song 4: Devara Ayudha Pooka</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="music-player">
+        <div class="album-cover">
+          <img id="album-art" src="/placeholder.svg?height=200&width=200" height="200" width="200" alt="Album Cover">
+        </div>
+        <div class="visualizer-container">
+          <canvas id="visualizer"></canvas>
+        </div>
+        <div class="song-info">
+          <h2 id="song-title">Song Title</h2>
+          <p id="song-artist">Artist</p>
+        </div>
+        <div class="progress-container">
+          <span id="current-time">0:00</span>
+          <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+          </div>
+          <span id="duration">0:00</span>
+        </div>
+        <div class="controls">
+          <button id="prev" class="control-btn"><i class="fas fa-step-backward"></i></button>
+          <button id="play" class="control-btn play-btn"><i class="fas fa-play"></i></button>
+          <button id="next" class="control-btn"><i class="fas fa-step-forward"></i></button>
+        </div>
+        <div class="volume-container">
+          <i class="fas fa-volume-down"></i>
+          <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+          <i class="fas fa-volume-up"></i>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
+

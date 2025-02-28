@@ -1,0 +1,330 @@
+:root {
+    --primary-color: #1db954;
+    --secondary-color: #191414;
+    --text-color: #ffffff;
+    --background-color: #121212;
+    --card-color: #181818;
+    --hover-color: #282828;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Emirates-Bold", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+  
+  /* Header styling */
+  header {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  header h2 {
+    font-size: 50px;
+    display: inline-block;
+  }
+  li{
+    font-size: x-large;
+  }
+
+  #background-blur {
+    position: fixed;
+    top: 0;
+    bottom: 15%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    mask-image: linear-gradient(to top, lightgrey , transparent 115%);
+    transition: background-image 0.5s ease-in-out;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 20px;
+    max-width: 1200px;
+    position: relative;
+    left: 40px;
+    zoom: 85%;
+    height: 600px;
+  }
+  
+  /* Playlist styling */
+  .playlist-box {
+    width: 500px;
+    background-color: var(--card-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    height: fit-content;
+  }
+  
+  .playlist h1 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  #playlist-items {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  #playlist-items li {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  #playlist-items li:hover {
+    background-color: var(--hover-color);
+  }
+  
+  #playlist-items li.active {
+    background-color: rgba(29, 185, 84, 0.2);
+    border-left: 3px solid var(--primary-color);
+  }
+  
+  /* Music Player Styling */
+  .container {
+    width: 550px;
+  }
+  
+  .music-player {
+    background-color: var(--card-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .album-cover {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .album-cover img {
+    width: 80%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .visualizer-container {
+    width: 100%;
+    height: 80px;
+    margin: 15px 0;
+  }
+  
+  #visualizer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  .song-info {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .song-info h2 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+  }
+  
+  .song-info p {
+    color: #b3b3b3;
+    font-size: 1rem;
+  }
+  
+  .progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .progress-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #535353;
+    border-radius: 3px;
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .progress {
+    width: 0%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    transition: width 0.1s linear;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .control-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .control-btn:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+  }
+  
+  .play-btn {
+    font-size: 1.8rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .play-btn:hover {
+    background-color: #1ed760;
+  }
+  
+  .volume-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .volume-container i {
+    margin: 0 10px;
+    color: #b3b3b3;
+  }
+  
+  #volume {
+    flex: 1;
+    appearance: none;
+    height: 5px;
+    background: #535353;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  /* Custom scrollbar for playlist */
+  #playlist-items::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  #playlist-items::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  #playlist-items::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+  }
+  /* Responsive styles */
+  @media (max-width: 850px) {
+    main {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      left: -20px;
+    }
+  
+    .playlist-box,
+    .container {
+      width: 90%;
+      max-width: 450px;
+    }
+  
+    .playlist-box {
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h2 {
+     font-size: 36px;
+     position: relative;
+     left: 12px;
+    }
+  
+    .music-player,
+    .playlist-box {
+      padding: 15px;
+    }
+  
+    .album-cover img {
+      width: 60%;
+    }
+  
+    .visualizer-container {
+      height: 60px;
+    }
+  
+    .control-btn {
+      font-size: 0.9rem;
+      margin: 0 8px;
+    }
+  
+    .play-btn {
+      font-size: 1.3rem;
+      width: 45px;
+      height: 45px;
+    }
+    main {
+        left: 10px;
+    }
+    body {
+        height: 80vh;
+        overflow: hidden;
+    }
+
+    main {
+        height: calc(100vh - 100px); /* Adjust based on header height */
+        overflow-y: auto;
+    }
+  }
+  
+  
