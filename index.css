@@ -263,7 +263,7 @@
     border-radius: 5px;
   }
   /* Responsive styles */
-  @media (max-width: 850px) {
+/*   @media (max-width: 850px) {
     main {
       flex-direction: column;
       justify-content: center;
@@ -282,8 +282,8 @@
       margin-bottom: 30px;
     }
   }
-  
-  @media (max-width: 480px) {
+   */
+  @media (max-width: 850px) {
     header h2 {
      font-size: 36px;
      position: relative;
